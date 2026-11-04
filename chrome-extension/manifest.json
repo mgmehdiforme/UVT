@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "UVT - Universal Voice Translator",
+  "version": "0.1.0",
+  "description": "Real-time speech-to-speech voice translation in Chrome Side Panel with virtual audio routing powered by Google Gemini Live API and ADC.",
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "https://*.aiplatform.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open UVT Side Panel"
+  }
+}

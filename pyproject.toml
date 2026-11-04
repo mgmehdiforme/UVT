@@ -1,0 +1,29 @@
+[project]
+name = "uvt"
+version = "0.1.0"
+description = "Universal Voice Translator (UVT) - Real-time speech-to-speech voice translation in Chrome Side Panel with virtual audio routing powered by Google Gemini Live API and ADC."
+authors = [
+    { name = "Mehdi Golzari", email = "i.entersoft@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-auth>=2.28.0",
+    "google-auth-httplib2>=0.2.0",
+    "websockets>=13.0.0",
+    "sounddevice>=0.4.6",
+    "numpy>=1.26.0",
+    "scipy>=1.12.0",
+    "pydantic>=2.6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.3.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

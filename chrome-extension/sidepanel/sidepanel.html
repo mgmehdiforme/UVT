@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UVT - Universal Voice Translator</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-title">
+        <span class="icon">🌐</span>
+        <h1>UVT</h1>
+      </div>
+      <div class="status-badge" id="connection-status">Disconnected</div>
+    </header>
+
+    <section class="language-bar">
+      <div class="lang-select-group">
+        <label for="source-lang">You Speak</label>
+        <select id="source-lang">
+          <option value="Persian" selected>Persian (فارسی)</option>
+          <option value="English">English</option>
+          <option value="Spanish">Spanish (Español)</option>
+          <option value="German">German (Deutsch)</option>
+          <option value="French">French (Français)</option>
+          <option value="Japanese">Japanese (日本語)</option>
+        </select>
+      </div>
+
+      <button id="swap-lang-btn" title="Swap Languages">⇄</button>
+
+      <div class="lang-select-group">
+        <label for="target-lang">Meeting Hears</label>
+        <select id="target-lang">
+          <option value="English" selected>English</option>
+          <option value="Persian">Persian (فارسی)</option>
+          <option value="Spanish">Spanish (Español)</option>
+          <option value="German">German (Deutsch)</option>
+          <option value="French">French (Français)</option>
+          <option value="Japanese">Japanese (日本語)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="device-status-card">
+      <div class="device-row">
+        <span class="label">🎙️ Mic Input:</span>
+        <span class="value" id="mic-status">UVT-Mic (Ready)</span>
+      </div>
+      <div class="device-row">
+        <span class="label">🔊 Meeting Audio:</span>
+        <span class="value" id="speaker-status">UVT-Speaker (Ready)</span>
+      </div>
+      <div class="device-row">
+        <span class="label">🔑 Auth:</span>
+        <span class="value" id="auth-status">Google ADC (Active)</span>
+      </div>
+    </section>
+
+    <section class="action-bar">
+      <button id="toggle-session-btn" class="primary-btn">Connect & Start Translation</button>
+      <button id="pass-through-btn" class="secondary-btn" title="Speak without translation">Pass-Through</button>
+    </section>
+
+    <section class="transcript-container">
+      <h3>Live Subtitles</h3>
+      <div id="transcript-feed" class="transcript-feed">
+        <div class="transcript-empty">Transcripts will appear here in real-time...</div>
+      </div>
+    </section>
+  </div>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
